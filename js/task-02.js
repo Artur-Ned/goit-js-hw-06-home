@@ -9,14 +9,25 @@ const ingredients = [
 
 let arrOfIngredients = document.querySelector('#ingredients');
 
+let itemOfIngrediets = ingredients.map((ingredien) => {
+  let itemOfUl = document.createElement('li');
+  itemOfUl.textContent = ingredien;
+  itemOfUl.classList.add('item');
+  return itemOfUl;
+});
+  arrOfIngredients.append(...itemOfIngrediets);
+//  
+
+// console.log(arrOfIngredients);
 
 
-for (let ingredient of ingredients) {
-  let liIngredient = liIngredient.createElement('li');
-  liIngredient.textContent = "PPPPPPPP";
-  arrOfIngredients.append.liIngredient;
-  // console.log(ingredient);
-}
+// for (let ingredient of ingredients) {
+// let itemOfUl = document.createElement('li');
+// itemOfUl.textContent = ingredient;
+//   itemOfUl.classList.add('item');
+//   arrOfIngredients.appendChild(itemOfUl);
+  
+// }
 
 
 /*
