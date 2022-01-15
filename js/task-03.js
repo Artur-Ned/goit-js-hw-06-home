@@ -20,6 +20,7 @@ const getImages = document.querySelector('.gallery');
 getImages.style.display = 'flex';
 getImages.style.justifyContent = 'space-between';
 getImages.style.listStyle = 'none';
+
 let itemOfImage = images.map((image) => {
   return `<li><img src="${image.url}" alt="${image.alt}" width='400px' height='260px'/></li>`;
   
