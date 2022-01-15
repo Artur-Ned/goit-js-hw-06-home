@@ -13,31 +13,32 @@ const images = [
   },
 ];
 
-const getImagesById = document.querySelector(".gallery");
-
-const listItemEl = images.map(images => {
+// const getImagesById = document.querySelector(".gallery");
+// getImagesById.style.display = 'flex';
+// getImagesById.style.justifyContent = 'space-between';
+// getImagesById.style.listStyle = 'none';
+// const listItemEl = images.map(image => {
   
-  return `<li><img src="${images.url}" alt="${images.alt}" width='400px' height='260px'></li>`;
-  
-}).join('');
-  
-// console.log(listItemEl);
-
-getImagesById.insertAdjacentHTML('afterbegin', listItemEl);
-
-
-// const getImagesById = document.querySelector('#gallery');
-
-// let itemOfImage = images.map((image) => {
-//   return `<li><img src="${image.url}" alt="${image.alt}"/></li>`;
+//   return `<li><img src="${image.url}" alt="${image.alt}" width='400px' height='260px'></li>`;
   
 // }).join('');
+  
+// getImagesById.insertAdjacentHTML('afterbegin', listItemEl);
+
+
+const getImages = document.querySelector('.gallery');
+getImages.style.display = 'flex';
+getImages.style.justifyContent = 'space-between';
+getImages.style.listStyle = 'none';
+let itemOfImage = images.map((image) => {
+  return `<li><img src="${image.url}" alt="${image.alt}" width='400px' height='260px'/></li>`;
+  
+}).join('');
 // console.log(itemOfImage);
-// gallery.insertAdjacentHTML("afterbegin", itemOfImage);
+getImages.insertAdjacentHTML("afterbegin", itemOfImage);
 
-// list.insertAdjacentHTML("beforeend", markup);
-//  <img"${image.url}" alt="${image.alt}"></a>
 
+ 
 
 /**
  Напиши скрипт для создания галереи изображений по массиву данных. В HTML 
