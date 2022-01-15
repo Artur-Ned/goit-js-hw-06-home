@@ -13,17 +13,7 @@ const images = [
   },
 ];
 
-// const getImagesById = document.querySelector(".gallery");
-// getImagesById.style.display = 'flex';
-// getImagesById.style.justifyContent = 'space-between';
-// getImagesById.style.listStyle = 'none';
-// const listItemEl = images.map(image => {
-  
-//   return `<li><img src="${image.url}" alt="${image.alt}" width='400px' height='260px'></li>`;
-  
-// }).join('');
-  
-// getImagesById.insertAdjacentHTML('afterbegin', listItemEl);
+
 
 
 const getImages = document.querySelector('.gallery');
