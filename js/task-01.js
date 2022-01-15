@@ -1,14 +1,16 @@
 
-const UlcategoriesRef = document.querySelector("#categories");
-const LiINUlcategoriesRef = document.querySelectorAll('.item');
+const ulcategoriesRef = document.querySelector("#categories");
+const LiINUlcategoriesRef = ulcategoriesRef.querySelectorAll('.item');
+console.log(`Number of categories: ${LiINUlcategoriesRef.length}`);
 
-// for (const ul of UlcategoriesRef) {
-//     console.log(ul);
-// }
+for (const element of LiINUlcategoriesRef) {
+   const titleElenment = element.querySelector('h2') 
+   const liElenment =  element.querySelectorAll('li')
+    console.log(`Category: ${titleElenment.textContent}`); 
+    console.log(`Elements: ${liElenment.length}`);
+   }
 
-console.log(UlcategoriesRef);
 
-// console.log(LiINUlcategoriesRef);
 /**Напиши скрипт который:
 
 Посчитает и выведет в консоль количество категорий в ul#categories, 
