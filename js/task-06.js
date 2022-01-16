@@ -1,24 +1,30 @@
 let inputRef = document.querySelector("#validation-input");
-// console.log(inputRef.dataset.length);
+console.log(inputRef.dataset.length);
 
 inputRef.addEventListener('blur', foo);
 
 function foo(event) {
     let inputRefValue = event.currentTarget.value.length;
-    if (inputRefValue !== inputRef.dataset.length) {
-      
-        inputRef.classList.add("invalid");
-       
-    } else inputRef.classList.add("valid");
+    if (inputRefValue === 6) {
+        remove()
+        inputRef.classList.add("valid");
+        console.log("you win");
+     return  
+    } else inputRef.classList.add("invalid");
     // let numberOfLength = inputRef.dataset.length;
-         console.log("you win");   
+    
+    console.log("you loos");
     // inputRef.classList.add("valid");   
      
 }
   
-   
+function remove() {
+     
+    inputRef.classList.remove("valid");
+    inputRef.classList.remove("invalid");
+   }
 
-
+// elem.classList.remove(cls) - удаляет класс cls из списка классов элемента.
 //   // inputRef.classList.add("invalid");
 // event.currentTarget.value.length === inputRef.dataset.length
 // console.log(numberOfLength);
