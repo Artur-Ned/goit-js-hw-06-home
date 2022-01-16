@@ -7,9 +7,10 @@ function foo(event) {
     let inputRefValue = event.currentTarget.value.length;
     if (inputRefValue === 6) {
         remove()
-        inputRef.classList.add("valid");
-        console.log("you win");
-     return  
+         console.log("you win");
+  
+        return inputRef.classList.add("valid");
+      
     } else inputRef.classList.add("invalid");
     // let numberOfLength = inputRef.dataset.length;
     
