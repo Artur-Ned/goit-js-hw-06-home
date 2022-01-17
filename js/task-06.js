@@ -5,7 +5,7 @@ inputRef.addEventListener('blur', foo);
 
 function foo(event) {
     let inputRefValue = event.currentTarget.value.length;
-    if (inputRefValue === 6) {
+    if (inputRefValue === +inputRef.dataset.length) {
         remove()
          console.log("you win");
   
