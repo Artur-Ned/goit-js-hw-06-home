@@ -1,5 +1,34 @@
+let form = document.querySelector('.login-form');
+let emailRef = document.querySelector('.email');
+let passRef = document.querySelector('password');
+
+form.addEventListener('submit', foo);
+// console.log(form);
+function foo(event) {
+    event.preventDefault();
+    // console.log('клик клик')
+    let formElements = event.currentTarget.elements;
+    let email = formElements.email.value;
+    let password = formElements.password.value;
+    
+    let formData = {
+        email,
+        password
+    }
+    if (email === '' || password === '') {
+        alert('все поля должны быть заполнены')
+    } else console.log(formData);
+    
+     event.currentTarget.reset();
+    
+
+// let formData = new FormData(event.currentTarget);
+//     formData.forEach((x, y)=>{
+//         console.log(x, y)
+//     });
 
 
+}
 
 /**Обработка отправки формы form.login-form должна быть по событию submit.
 При отправке формы страница не должна перезагружаться.
